@@ -49,7 +49,7 @@ require "header.php";
     }
 }                
     else {
-        echo '	<p class="text-center"><br>You are have no permission!<br><br></p>';  
+        echo '	<p class="text-center"><br>You are have no permission!<br><br></p>';          
     }      
 ?>
     </div>

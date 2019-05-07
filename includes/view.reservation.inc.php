@@ -23,6 +23,7 @@ if(isset($_SESSION['user_id'])){
                     <tr>
                         <th scope="col">Full Name</th>
                         <th scope="col">Guests</th>
+                        <th scope="col">Tables</th>
                         <th scope="col">Reservation Date</th>
                         <th scope="col">Time Zone</th>
                         <th scope="col">Telephone</th>
@@ -39,6 +40,7 @@ if(isset($_SESSION['user_id'])){
                     <input name='reserv_id' type='hidden' value=".$row["reserv_id"].">
                       <th scope='row'>".$row["f_name"]." ".$row["l_name"]."</th>
                       <td>".$row["num_guests"]."</td>
+                      <td>".$row["num_tables"]."</td>
                       <td>".$row["rdate"]."</td>
                       <td>".$row["time_zone"]."</td>
                       <td>".$row["telephone"]."</td>
