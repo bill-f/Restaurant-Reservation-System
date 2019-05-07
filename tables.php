@@ -7,8 +7,7 @@ require "header.php";
     <h3 class="text-center"><br>Edit Tables<br></h3>
     <div class="col-md-6 offset-md-3">
 
-                
-                
+                           
 <?php if(isset($_SESSION['user_id'])){
     if($_SESSION['role']==2){
         
@@ -28,9 +27,7 @@ require "header.php";
         }
         }
         echo'
-                   
-                    
-                
+                                                 
 <div class="signup-form">
         <form action="includes/tables.inc.php" method="post">
             <div class="form-group">
