@@ -72,7 +72,6 @@ if(isset($_SESSION['user_id'])){
             <table class="table table-hover table-bordered table-responsive-sm text-center">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
                         <th scope="col">Date</th>
                         <th scope="col">Total Tables</th>
                         <th class="table-danger" scope="col"></th>
@@ -84,8 +83,7 @@ if(isset($_SESSION['user_id'])){
                     <tr>
                     <form action='includes/delete.php' method='POST'>
                     <input name='tables_id' type='hidden' value=".$row["tables_id"].">
-                      <th scope='row'>".$row["tables_id"]."</th>
-                      <td>".$row["t_date"]."</td>
+                      <th scope='row'>".$row["t_date"]."</th>
                       <td>".$row["t_tables"]."</td>
                       <td class='table-danger'><button type='submit' name='delete-table' class='btn btn-danger btn-sm'>Delete</button></td>
                           </form>
