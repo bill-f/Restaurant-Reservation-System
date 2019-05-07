@@ -23,13 +23,12 @@ if(isset($_SESSION['user_id'])){
                     <tr>
                         <th scope="col">Full Name</th>
                         <th scope="col">Guests</th>
-                        <th scope="col">Tables</th>
                         <th scope="col">Reservation Date</th>
                         <th scope="col">Time Zone</th>
                         <th scope="col">Telephone</th>
                         <th scope="col">Register Date</th>
                         <th scope="col">Comments</th>
-                        <th class="table-danger" scope="col">Delete</th>
+                        <th class="table-danger" scope="col"></th>
                     </tr>
                 </thead> ';
         while($row = $result->fetch_assoc()) {
@@ -40,12 +39,11 @@ if(isset($_SESSION['user_id'])){
                     <input name='reserv_id' type='hidden' value=".$row["reserv_id"].">
                       <th scope='row'>".$row["f_name"]." ".$row["l_name"]."</th>
                       <td>".$row["num_guests"]."</td>
-                      <td>".$row["num_tables"]."</td>
                       <td>".$row["rdate"]."</td>
                       <td>".$row["time_zone"]."</td>
                       <td>".$row["telephone"]."</td>
                       <td>".$row["reg_date"]."</td>
-                      <td>".$row["comment"]."</td>
+                      <td><textarea readonly>".$row["comment"]."</textarea></td>
                       <td class='table-danger'><button type='submit' name='delete-submit' class='btn btn-danger btn-sm'>Cancel</button></td>
                           </form>
                     </tr>
@@ -76,12 +74,13 @@ if(isset($_SESSION['user_id'])){
                         <th scope="col">ID</th>
                         <th scope="col">Full Name</th>
                         <th scope="col">Guests</th>
+                        <th scope="col">Tables</th>
                         <th scope="col">Reservation Date</th>
                         <th scope="col">Time Zone</th>
                         <th scope="col">Telephone</th>
                         <th scope="col">Register Date</th>
                         <th scope="col">Comments</th>
-                        <th class="table-danger" scope="col">Delete</th>
+                        <th class="table-danger" scope="col"></th>
                     </tr>
                 </thead> ';
         while($row = $result->fetch_assoc()) {
@@ -93,11 +92,12 @@ if(isset($_SESSION['user_id'])){
                       <th scope='row'>".$row["reserv_id"]."</th> 
                       <td>".$row["f_name"]." ".$row["l_name"]."</td>
                       <td>".$row["num_guests"]."</td>
+                      <td>".$row["num_tables"]."</td>
                       <td>".$row["rdate"]."</td>
                       <td>".$row["time_zone"]."</td>
                       <td>".$row["telephone"]."</td>
                       <td>".$row["reg_date"]."</td>
-                      <td>".$row["comment"]."</td>
+                      <td><textarea readonly>".$row["comment"]."</textarea></td>
                       <td class='table-danger'><button type='submit' name='delete-submit' class='btn btn-danger btn-sm'>Cancel</button></td>
                           </form>
                     </tr>
